@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: customer_service
+        uri: http://localhost:8081
+        predicates:
+        - Path=/customer/**
